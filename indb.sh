@@ -9,4 +9,4 @@ sleep 20
 #kubectl config set-context --current --namespace=guacamole
 POD=$(kubectl get pod -l app=postgres -o jsonpath="{.items[0].metadata.name}")
 kubectl exec -i $POD -- psql -U guacamole -d guacamole_db < initdb.sql
-kubectl apply -f /home/svc_mgmt/kub-gauc/
+kubectl apply -f $HOME/kubernetes-guacamole-postgres

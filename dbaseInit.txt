@@ -1,1 +1,0 @@
-kubectl exec -i psql-pod-name-here -- psql -U guacamole -d guacamole_db < initdb.sql
