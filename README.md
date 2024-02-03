@@ -1,7 +1,17 @@
 This series of YAML files sets up a vanilla Apache Guacamole remote access gateway on kubernetes v29.1
+props to various people on the internet who have kindly shared their code which I have cobbled togather to get this working.
 
-The underlying database as you might guess from the name of the repo is Postgresql
 
+The postres bit was based on this excellent digital ocean tutorial:
+
+https://www.digitalocean.com/community/tutorials/how-to-deploy-postgres-to-kubernetes-cluster
+
+The Guacamole bit was inspired by the medium article:
+
+https://oopflow.medium.com/how-to-install-guacamole-on-kubernetes-7d747438c141
+
+
+The underlying database as you might guess from the name of the repo is Postgresql, and it's using peristent storage.
 The Apache guacamole components (guacamole, guacd) are both vanilla from Apache 
 
 
