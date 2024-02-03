@@ -35,7 +35,7 @@ it will probably look like:
 
 10.244.xxx.xxx:8080
 
-paste it into a browser on a device that can route to that network,
+paste it and modify it so it looks like that below, into a browser on a device that can route to that network,
 
 http://10.244.xxx.xxx:8080/guacamole/#/
 
