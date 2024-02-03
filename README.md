@@ -29,4 +29,15 @@ Once installed find the endpoint IP address by using the following command:
 
 kubectl describe svc guacamole
 
+grab that ip address and port, depending on the pod network choice, if its the default one that that most people go for (10.244.0.0/16)
 
+it will probably look like: 
+
+10.244.xxx.xxx:8080
+
+paste it into a browser on a device that can route to that network,
+
+http://10.244.xxx.xxx:8080/guacamole/#/
+
+and you should be presented with the guacamole login screen.  
+The default credentials? both username and password set to guacadmin, prudent to create a new admin account and disable that one.
