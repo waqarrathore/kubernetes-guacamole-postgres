@@ -1,3 +1,4 @@
+#!/bin/bash
 kubectl config set-context --current --namespace=guacamole
 kubectl apply -f 00-gauca-namespace.yaml
 kubectl apply -f 08-guaca-secret.yaml
