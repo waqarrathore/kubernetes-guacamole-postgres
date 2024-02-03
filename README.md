@@ -41,3 +41,10 @@ http://10.244.xxx.xxx:8080/guacamole/#/
 
 and you should be presented with the guacamole login screen.  
 The default credentials? both username and password set to guacadmin, prudent to create a new admin account and disable that one.
+
+Troubleshooting.
+The script initially starts up the postres database pod, and injects the guacamole schema into it.
+It waits 20 seconds for the pod to start up before running the schema update on the database
+Change the slepp length in the indb.sh script if you find that the postgres service is slow to start
+Will have to find a cleverer way of doing this bit. Timers eh?? Pffft
+
