@@ -47,7 +47,5 @@ spec:
           mountPath: /var/lib/guacamole/guac-config
       volumes:
       - name: guac-config
-         persistentVolumeClaim:
-         claimName: guacamole-volume-claim
-
-        
+        persistentVolumeClaim:
+          claimName: guacamole-volume-claim
