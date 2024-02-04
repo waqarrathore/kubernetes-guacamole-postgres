@@ -43,9 +43,11 @@ spec:
         - name: POSTGRESQL_AUTO_CREATE_ACCOUNTS
           value: "true"
         volumeMounts:
-        - name: drive
-          mountPath: /drive
+        - name: guac-config
+          mountPath: /var/lib/guacamole/guac-config
       volumes:
-      - name: drive
-        hostPath:
-          path: /guacamole/drive
+      - name: guac-config
+         persistentVolumeClaim:
+         claimName: guacamole-volume-claim
+
+        
