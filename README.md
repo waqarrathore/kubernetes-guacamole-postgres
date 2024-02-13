@@ -35,17 +35,17 @@ cd kubernetes-guacamole-postgres
 The script changes the namespace context in kubernetes, so you should be able to view the pods for the app, run a "kubectl get pods"
 They'll be a minimum of 3, a guacamole one, a guacd one and a postgres one.
 
-Once installed find the endpoint IP address by using the following command:
+run the kubectl describe svc guacamole to find information about ingress, depending on how your K8s is configured
 
-kubectl describe svc guacamole
+if you are running an ingress controller the config for the deployment will automatically get assigned a external load balanced IP address, 
+otherwise use the nodeport port, or do this:-
 
 grab that ip address and port, depending on the pod network choice, if its the default one that that most people go for (10.244.0.0/16)
 
 it will probably look like: 
 
 10.244.xxx.xxx:8080
-
-paste it and modify it so it looks like that below, into a browser on a device that can route to that network,
+That's going to be a tranistory address at best but it will get you to the login screen, just as long as you've got routing set up to get to the pod network.
 
 http://10.244.xxx.xxx:8080/guacamole/#/
 
