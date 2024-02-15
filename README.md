@@ -31,7 +31,8 @@ clone the repo onto the home drive of the administrative user on the control pla
 cd kubernetes-guacamole-postgres
 
 ./indb.sh (you will need to make this executable with a chmod +x indb.sh)
-this script invokes the postgres database container and inject the schema into the database for guacamole. 
+
+this script invokes the postgres database container and injects the schema into the database for guacamole. 
 There's a pause in play to allow the DB pod/container to come online
 Once the database has been initalised the rest of the components are loaded up.
 The pause is unintelligent (sleep 60 seconds) so it might go wrong depending on the oomph of  the cluster your rendering this on.
